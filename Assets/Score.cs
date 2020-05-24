@@ -28,8 +28,10 @@ public class Score : MonoBehaviour
         Debug.Log("Score detected!");
          
 
+        
          Destroy(ball);
          Debug.Log("Ball destroyed!");
+        
 
             
          manager.UpdateScore(scorer);
