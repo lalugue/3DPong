@@ -16,6 +16,8 @@ public class BallMovement : MonoBehaviour
      verti = Vector3.back;
      direk = hori + verti;
 
+     //this.gameObject.GetComponent<Rigidbody>().AddForce(direk * velocity);
+
      //Debug.Log("Ball is moving");
         
     }
@@ -28,13 +30,20 @@ public class BallMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("Collision detected!");
+        Debug.Log("Collision detected!");
 
          // get the point of contact
          ContactPoint contact = collision.contacts[0];
          
+         
          // reflect our old velocity off the contact point's normal vector
-         direk = Vector3.Reflect(direk, contact.normal);   
+         Vector3 normal = contact.normal;
+         //Vector3 normalProject = new Vector3(normal.x, normal.y, 0);
+         //Vector3 newdirek = Vector3.Project(normal,normalProject);         
+         direk = Vector3.Reflect(direk, normal);
+         direk = Vector3.ProjectOnPlane(direk, Vector3.down);  
+         
+
 
         //direk = Vector3.Reflect(direk, collision.transform.position);
     }
