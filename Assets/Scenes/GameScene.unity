@@ -549,7 +549,7 @@ PrefabInstance:
     - target: {fileID: 4614870054718580099, guid: 5d90e27c513c59043962476d2fec108f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.7
+      value: 11.8
       objectReference: {fileID: 0}
     - target: {fileID: 4614870054718580099, guid: 5d90e27c513c59043962476d2fec108f,
         type: 3}
@@ -606,6 +606,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 4614870054718580103, guid: 5d90e27c513c59043962476d2fec108f,
+        type: 3}
+      propertyPath: velocity
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614870054718580108, guid: 5d90e27c513c59043962476d2fec108f,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614870054718580108, guid: 5d90e27c513c59043962476d2fec108f,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d90e27c513c59043962476d2fec108f, type: 3}
 --- !u!1001 &6120910426552194393
@@ -633,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 6120910426348195369, guid: 5d78851f1c14a9a4d8f6fc7f35b4917f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6120910426348195369, guid: 5d78851f1c14a9a4d8f6fc7f35b4917f,
         type: 3}
@@ -744,6 +759,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7919720157576687799, guid: 84b874f8f825f7843bce4b54bbaa9796,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7919720157576687802, guid: 84b874f8f825f7843bce4b54bbaa9796,
         type: 3}
       propertyPath: m_Name
@@ -762,6 +782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345157159788538140, guid: 7e5e98d086c28ee499b229bd07aa6508,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345157159788538143, guid: 7e5e98d086c28ee499b229bd07aa6508,
         type: 3}
@@ -845,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 8768239725149329199, guid: c8fbc3bb07a1d584cb8223cf626eae61,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35
+      value: -34
       objectReference: {fileID: 0}
     - target: {fileID: 8768239725149329199, guid: c8fbc3bb07a1d584cb8223cf626eae61,
         type: 3}
