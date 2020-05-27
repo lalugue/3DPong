@@ -6,20 +6,22 @@ using UnityEngine.UI;
 public class ScoreUI : MonoBehaviour
 {
     Text score;
-    static int playerScoreUI;
-    static int opponentScoreUI;
+    static int playerScoreUI = 0;
+    static int opponentScoreUI = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         score = GetComponentInChildren<Text>();
+        score.text = "Player: " + playerScoreUI + "\nOpponent: " + opponentScoreUI;
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "Player: " + playerScoreUI;
+        score.text = "Player: " + playerScoreUI + "\nOpponent: " + opponentScoreUI;
         
     }
 

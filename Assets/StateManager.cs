@@ -38,6 +38,7 @@ public class StateManager : MonoBehaviour
         scores[scorer.name] = newScore;
 
         Debug.Log("updated scores: ");
+        //List and Display Scores helper function
         ListScores();       
 
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
@@ -50,6 +51,8 @@ public class StateManager : MonoBehaviour
             Debug.Log("Player: " + score.Key + " Score: " + score.Value);
 
         }
+
+        //Update the scores in the UI
         ScoreUI.UpdateScoresUI(scores["Player"], scores["Opponent"]);
     }
 }
