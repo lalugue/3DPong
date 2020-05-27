@@ -38,7 +38,8 @@ public class StateManager : MonoBehaviour
         scores[scorer.name] = newScore;
 
         Debug.Log("updated scores: ");
-        ListScores();
+        ListScores();       
+
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene("GameScene");
     }
@@ -47,6 +48,8 @@ public class StateManager : MonoBehaviour
         foreach (KeyValuePair<string, int> score in scores)
         {
             Debug.Log("Player: " + score.Key + " Score: " + score.Value);
+
         }
+        ScoreUI.UpdateScoresUI(scores["Player"], scores["Opponent"]);
     }
 }
