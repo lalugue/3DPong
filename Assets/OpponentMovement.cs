@@ -26,18 +26,13 @@ public class OpponentMovement : MonoBehaviour
             Vector3 oldposition = this.transform.position;
             Vector3 target = new Vector3(ball.transform.position.x,0,0);
             target = new Vector3(target.x,oldposition.y,oldposition.z);
-            //target = new Vector3(target.x - oldposition.x, 0, 0);
-           
             
-            
-            //this.transform.position += (target - oldposition) * velocity * Time.deltaTime;            
-            //rb.MovePosition(target * velocity * Time.deltaTime);
             
             if(Mathf.Abs(ball.transform.position.x - this.transform.position.x) >= size.magnitude/2){
-            rb.velocity = (target - oldposition).normalized * velocity;            
+                rb.velocity = (target - oldposition).normalized * velocity;            
             }
             
-            //Debug.Log("Target position is: " + this.transform.position);
+            
         }
         
     }
