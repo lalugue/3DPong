@@ -6,9 +6,11 @@ public class OpponentMovement : MonoBehaviour
 {    
     public int velocity = 5;
     public GameObject ball;
+    Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
+        rb = this.GetComponent<Rigidbody>();
         
     }
 
@@ -22,7 +24,7 @@ public class OpponentMovement : MonoBehaviour
             
             
             //this.transform.position += (target - oldposition) * velocity * Time.deltaTime;
-            this.transform.position += target * velocity * Time.deltaTime;
+            rb.MovePosition(oldposition + (target * velocity * Time.deltaTime));
             //Debug.Log("Target position is: " + this.transform.position);
         }
         
