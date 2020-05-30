@@ -7,13 +7,14 @@ public class OpponentMovement : MonoBehaviour
     public int velocity = 5;
     public GameObject ball;
     Rigidbody rb;
-    double lastTime = 0;
+     Vector3 size;
    
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
         Debug.Log("The fixed time interval is: " + Time.fixedDeltaTime);
+        size = this.GetComponentInChildren<Renderer>().bounds.size;
      
         
     }
@@ -32,8 +33,9 @@ public class OpponentMovement : MonoBehaviour
             //this.transform.position += (target - oldposition) * velocity * Time.deltaTime;            
             //rb.MovePosition(target * velocity * Time.deltaTime);
             
-            rb.velocity = (target - oldposition).normalized * velocity;
-            lastTime = Time.time;
+            if(Mathf.Abs(ball.transform.position.x - this.transform.position.x) >= size.magnitude/2){
+            rb.velocity = (target - oldposition).normalized * velocity;            
+            }
             
             //Debug.Log("Target position is: " + this.transform.position);
         }
