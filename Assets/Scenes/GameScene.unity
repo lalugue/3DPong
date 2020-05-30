@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4b32d884fd68ee7488e9c1673b6a6b90, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -696,8 +696,7 @@ MeshRenderer:
   m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -793,6 +792,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreWallOpponent
       objectReference: {fileID: 0}
+    - target: {fileID: 3014074439075030066, guid: 76ad9c514ecdea942a2a247f0c582004,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014074439075030066, guid: 76ad9c514ecdea942a2a247f0c582004,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 3014074439075030066, guid: 76ad9c514ecdea942a2a247f0c582004,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76ad9c514ecdea942a2a247f0c582004, type: 3}
 --- !u!1001 &4614870054776257636
@@ -1108,6 +1122,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8768239723376719531, guid: c8fbc3bb07a1d584cb8223cf626eae61,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768239723376719531, guid: c8fbc3bb07a1d584cb8223cf626eae61,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.3019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768239723376719531, guid: c8fbc3bb07a1d584cb8223cf626eae61,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.4745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768239723376719531, guid: c8fbc3bb07a1d584cb8223cf626eae61,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8768239723616949054, guid: c8fbc3bb07a1d584cb8223cf626eae61,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
