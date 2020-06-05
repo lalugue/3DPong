@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraOrbit : MonoBehaviour
 {
+    public float speed = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,7 @@ public class CameraOrbit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        this.transform.RotateAround(this.transform.position,Vector3.up, speed * Time.deltaTime);
         
     }
 }
