@@ -14,7 +14,7 @@ public class MainMenuStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.LeftArrow)){
+        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)){
             SceneManager.LoadScene("GameScene");
         }
         
