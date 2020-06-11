@@ -11,14 +11,19 @@ public class BallMovement : MonoBehaviour
     Vector3 direk;
     void Start()
     {
+    
         //this.transform.position += (horizontal+vertical) * velocity * Time.deltaTime;
-     hori = Vector3.right;
-     verti = Vector3.back;
-     direk = hori + verti;
+        float horidirek = Random.Range(-1,1);
+        horidirek = (horidirek != 0) ? horidirek : 1;     
+        horidirek = horidirek/Mathf.Abs(horidirek); 
+        hori = new Vector3(horidirek, 0, 0);
+        verti = Vector3.back;
+        direk = hori + verti;
+        Debug.Log("direk x is:" + direk.x);
+        
+        //this.gameObject.GetComponent<Rigidbody>().AddForce(direk * velocity);
 
-     //this.gameObject.GetComponent<Rigidbody>().AddForce(direk * velocity);
-
-     //Debug.Log("Ball is moving");
+        //Debug.Log("Ball is moving");
         
     }
 
