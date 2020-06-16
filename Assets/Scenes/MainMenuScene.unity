@@ -748,6 +748,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: StateManager
       objectReference: {fileID: 0}
+    - target: {fileID: 965323403343979971, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 965323403343979971, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 965323403343979996, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -771,7 +781,27 @@ PrefabInstance:
     - target: {fileID: 965323403343979997, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -85
+      value: -108
+      objectReference: {fileID: 0}
+    - target: {fileID: 965323403496876089, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
+        type: 3}
+      propertyPath: m_Text
+      value: Press Left and Right keys to move!
+      objectReference: {fileID: 0}
+    - target: {fileID: 965323403496876090, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 965323403496876090, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -78
+      objectReference: {fileID: 0}
+    - target: {fileID: 965323403496876090, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03, type: 3}
