@@ -1,6 +1,6 @@
 # 3D Pong
 
-Play pong in the perspective of the paddle!
+Play pong in the perspective of the trusty paddle!
 
 # TODO
 add howto
