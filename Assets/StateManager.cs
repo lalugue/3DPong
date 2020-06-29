@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StateManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class StateManager : MonoBehaviour
     public int playerScore = 0;
     public int opponentScore = 0;
     static Dictionary<string,int> scores = new Dictionary<string,int>();
+    public Text scoreAnnouncer;
     
     
     void Start()
@@ -31,18 +33,26 @@ public class StateManager : MonoBehaviour
     }
 
     public void UpdateScore(GameObject scorer){
+        scoreAnnouncer.gameObject.SetActive(true);
+        scoreAnnouncer.text = scorer.name + " has scored!";
         Debug.Log(scorer.name + "has scored!");
 
         int newScore = scores[scorer.name];
         newScore++;
         scores[scorer.name] = newScore;
 
+        float time = 3.0f;
+        while(time >= 0){
+            time -= Time.deltaTime;
+        }
+        
         Debug.Log("updated scores: ");
-        //List and Display Scores helper function
+        //List and Display Scores helper function; hide announcer text
         ListScores();       
-
+        //scoreAnnouncer.gameObject.SetActive(false);
+       
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
-        SceneManager.LoadScene("GameScene");
+        //SceneManager.LoadScene("GameScene");
     }
 
     void ListScores(){
