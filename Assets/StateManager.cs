@@ -71,7 +71,7 @@ public class StateManager : MonoBehaviour
         
         Time.timeScale = 0.001f;
         Debug.Log((float)duration * Time.timeScale);
-        yield return new WaitForSecondsRealtime((float)duration * Time.timeScale);
+        yield return new WaitForSeconds((float)duration * Time.timeScale);
         Time.timeScale = 1;
         
         
