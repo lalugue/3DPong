@@ -34,25 +34,32 @@ public class StateManager : MonoBehaviour
         //DontDestroyOnLoad(scores);
     }
 
-    public void UpdateScore(GameObject scorer){
+    public IEnumerator UpdateScore(GameObject scorer){
         scoreAnnouncer.gameObject.SetActive(true);
         scoreAnnouncer.text = scorer.name + " has scored!";
         Debug.Log(scorer.name + " has scored!");
 
+        
         int newScore = scores[scorer.name];
         newScore++;
         scores[scorer.name] = newScore;
-
-        StartCoroutine(Wait(3));
         
+        
+        //StartCoroutine(WaitandReload(3));
+        yield return new WaitForSecondsRealtime(3);
+
         Debug.Log("updated scores: ");
         //List and Display Scores helper function; hide announcer text
-        ListScores();       
-        //scoreAnnouncer.gameObject.SetActive(false);
+        ListScores();   
+
+        scoreAnnouncer.gameObject.SetActive(false);
 
                
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene("GameScene");
+        
+        
+        
     }
 
     void ListScores(){
@@ -66,17 +73,27 @@ public class StateManager : MonoBehaviour
         ScoreUI.UpdateScoresUI(scores["Player"], scores["Opponent"]);
     }
 
-    IEnumerator Wait(float duration){        
+    IEnumerator WaitandReload(float duration){        
         Debug.Log("Wait coroutine initiated for " + duration + " seconds");
         
-        Time.timeScale = 0.001f;
-        Debug.Log((float)duration * Time.timeScale);
-        yield return new WaitForSeconds((float)duration * Time.timeScale);
-        Time.timeScale = 1;
+        
+        Debug.Log((float)duration * Time.timeScale);        
+        yield return new WaitForSecondsRealtime(3);
+
+        /*
+        Debug.Log("updated scores: ");
+        //List and Display Scores helper function; hide announcer text
+        ListScores();   
+
+        scoreAnnouncer.gameObject.SetActive(false);
+
+               
+        // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        //SceneManager.LoadScene("GameScene");
+        */
         
         
         
-        
-        Debug.Log("Wait coroutine finished");
+       
     }
 }

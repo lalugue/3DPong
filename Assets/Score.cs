@@ -34,7 +34,7 @@ public class Score : MonoBehaviour
         
 
             
-         manager.UpdateScore(scorer);
+         StartCoroutine(manager.UpdateScore(scorer));
 
         
           
