@@ -11,9 +11,6 @@ public class StateManager : MonoBehaviour
     public int opponentScore = 0;
     static Dictionary<string,int> scores = new Dictionary<string,int>();
     public Text scoreAnnouncer;
-
-    
-    
     
     void Start()
     {
@@ -45,7 +42,7 @@ public class StateManager : MonoBehaviour
         scores[scorer.name] = newScore;
         
         
-        //StartCoroutine(WaitandReload(3));
+        
         yield return new WaitForSecondsRealtime(3);
 
         Debug.Log("updated scores: ");
@@ -57,8 +54,7 @@ public class StateManager : MonoBehaviour
                
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene("GameScene");
-        
-        
+               
         
     }
 
@@ -73,27 +69,5 @@ public class StateManager : MonoBehaviour
         ScoreUI.UpdateScoresUI(scores["Player"], scores["Opponent"]);
     }
 
-    IEnumerator WaitandReload(float duration){        
-        Debug.Log("Wait coroutine initiated for " + duration + " seconds");
-        
-        
-        Debug.Log((float)duration * Time.timeScale);        
-        yield return new WaitForSecondsRealtime(3);
-
-        /*
-        Debug.Log("updated scores: ");
-        //List and Display Scores helper function; hide announcer text
-        ListScores();   
-
-        scoreAnnouncer.gameObject.SetActive(false);
-
-               
-        // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
-        //SceneManager.LoadScene("GameScene");
-        */
-        
-        
-        
-       
-    }
+    
 }
