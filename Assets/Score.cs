@@ -9,6 +9,7 @@ public class Score : MonoBehaviour
     public GameObject scorer;
     public StateManager manager;
     //public static  StateManager manager;
+    public BallMovement ballscript;
     
     
     void Start()
@@ -34,6 +35,10 @@ public class Score : MonoBehaviour
         
 
             
+         //set next direction of ball
+        ballscript.SetPlayerDirection(scorer.name);
+
+         //update scores
          StartCoroutine(manager.UpdateScore(scorer));
 
         

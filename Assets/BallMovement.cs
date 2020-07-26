@@ -9,6 +9,7 @@ public class BallMovement : MonoBehaviour
     Vector3 hori;
     Vector3 verti;
     Vector3 direk;
+    static string scorer = "";
     void Start()
     {
     
@@ -17,8 +18,10 @@ public class BallMovement : MonoBehaviour
         horidirek = (horidirek != 0) ? horidirek : 1;     
         horidirek = horidirek/Mathf.Abs(horidirek); 
         hori = new Vector3(horidirek, 0, 0);
-        verti = Vector3.back;
+        verti = scorer == "Player" ? Vector3.forward : Vector3.back;
         direk = hori + verti;
+        
+        Debug.Log("scorer dictating ball direction is: " + scorer);
         Debug.Log("direk x is:" + direk.x);
         
         //this.gameObject.GetComponent<Rigidbody>().AddForce(direk * velocity);
@@ -51,5 +54,10 @@ public class BallMovement : MonoBehaviour
 
 
         //direk = Vector3.Reflect(direk, collision.transform.position);
+    }
+
+    public void SetPlayerDirection(string scorername){
+        scorer = scorername;
+             
     }
 }
