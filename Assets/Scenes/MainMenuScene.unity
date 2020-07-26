@@ -1480,7 +1480,7 @@ PrefabInstance:
     - target: {fileID: 965323403496876089, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
         type: 3}
       propertyPath: m_Text
-      value: Press Left and Right keys to move!
+      value: Press the Left and Right keys to move!
       objectReference: {fileID: 0}
     - target: {fileID: 965323403496876089, guid: 1cf8c5c4d7b6dc94fb89f592f26b2c03,
         type: 3}
