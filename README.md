@@ -8,7 +8,8 @@ Use the left and right arrow keys to move the paddle
 
 # TODO
 
-add screenshots
+increase speed of ball over time
+
 
 
 # acknowledgements
