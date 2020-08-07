@@ -3,7 +3,6 @@
     {
         "**/.DS_Store": true,
         "**/.git": true,
-        "**/.gitignore": true,
         "**/.gitmodules": true,
         "**/*.3ds": true,
         "**/*.3DS": true,
