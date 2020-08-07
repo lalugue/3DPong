@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
     
     void Start()
     {
-         //manager = GetComponent(typeof(StateManager)) as StateManager;
+         
         
     }
 

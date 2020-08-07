@@ -13,7 +13,7 @@ public class BallMovement : MonoBehaviour
     void Start()
     {
     
-        //this.transform.position += (horizontal+vertical) * velocity * Time.deltaTime;
+        
         float horidirek = Random.Range(-1,1);
         horidirek = (horidirek != 0) ? horidirek : 1;     
         horidirek = horidirek/Mathf.Abs(horidirek); 
@@ -22,11 +22,7 @@ public class BallMovement : MonoBehaviour
         direk = hori + verti;
         
         Debug.Log("scorer dictating ball direction is: " + scorer);
-        Debug.Log("direk x is:" + direk.x);
-        
-        //this.gameObject.GetComponent<Rigidbody>().AddForce(direk * velocity);
-
-        //Debug.Log("Ball is moving");
+        Debug.Log("direk x is:" + direk.x);      
         
     }
 
@@ -50,15 +46,10 @@ public class BallMovement : MonoBehaviour
          
          
          // reflect our old velocity off the contact point's normal vector
-         Vector3 normal = contact.normal;
-         //Vector3 normalProject = new Vector3(normal.x, normal.y, 0);
-         //Vector3 newdirek = Vector3.Project(normal,normalProject);         
+         Vector3 normal = contact.normal;                  
          direk = Vector3.Reflect(direk, normal);
          direk = Vector3.ProjectOnPlane(direk, Vector3.down);  
-         
-
-
-        //direk = Vector3.Reflect(direk, collision.transform.position);
+           
     }
 
     public void SetPlayerDirection(string scorername){

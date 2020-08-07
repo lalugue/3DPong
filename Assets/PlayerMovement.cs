@@ -17,13 +17,11 @@ public class PlayerMovement : MonoBehaviour
     {
 
         if (Input.GetKey(KeyCode.LeftArrow)){
-            Vector3 position = this.transform.position;
-            //position.x--;
+            Vector3 position = this.transform.position;            
             this.transform.position += Vector3.left * velocity * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.RightArrow)){
-            Vector3 position = this.transform.position;
-            //position.x--;
+            Vector3 position = this.transform.position;            
             this.transform.position += Vector3.right * velocity * Time.deltaTime;
         }
     }
