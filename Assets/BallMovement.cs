@@ -42,6 +42,11 @@ public class BallMovement : MonoBehaviour
 
          // get the point of contact
          ContactPoint contact = collision.contacts[0];
+
+         Debug.Log(collision.gameObject.name);
+         if((collision.gameObject.name == "Opponent") || (collision.gameObject.name == "Player")){
+             velocity++;
+         }
          
          
          // reflect our old velocity off the contact point's normal vector
