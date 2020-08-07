@@ -15,12 +15,6 @@ Use the left and right arrow keys to move the paddle
 ![screenshot 3](Screenshots/screenshot3.png)
 
 
-# TODO
-
-increase speed of ball over time
-
-
-
 # acknowledgements
 
 skybox material from [StumpyStrust](https://opengameart.org/content/space-skyboxes-0)
