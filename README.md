@@ -1,8 +1,8 @@
 # 3D Pong
 
-Play pong in the perspective of the trusty paddle!
+Play pong in the perspective of your trusty paddle!
 
-[Check out the game here!](https://koalatte.itch.io/pong-3d)
+[Play the game here!](https://koalatte.itch.io/pong-3d)
 
 ![cover](Screenshots/cover.png)
 
