@@ -17,8 +17,8 @@ Use the left and right arrow keys to move the paddle
 ![screenshot 3](Screenshots/screenshot3.png)
 
 
-# acknowledgements
+# Acknowledgements
 
-skybox material from [StumpyStrust](https://opengameart.org/content/space-skyboxes-0)
+Skybox material from [StumpyStrust](https://opengameart.org/content/space-skyboxes-0)
 
 acquired under CC0 license
