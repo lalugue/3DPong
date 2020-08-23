@@ -10,7 +10,7 @@ public class OpponentMovement : MonoBehaviour
     Vector3 size;
 
     System.Random rnd = new System.Random();
-    float[] reactTime = {0.5f, 0.75f, 1};
+    float[] reactTime = {0.25f, 0.5f, 0.75f};
     int reactPick;
    
     // Start is called before the first frame update
@@ -34,7 +34,7 @@ public class OpponentMovement : MonoBehaviour
             target = new Vector3(target.x,oldposition.y,oldposition.z);
             
             
-            if(Mathf.Abs(ball.transform.position.x - this.transform.position.x) >= size.magnitude * reactTime[reactPick]){
+            if(Mathf.Abs(ball.transform.position.x - this.transform.position.x) >= size.magnitude * (float)reactTime[reactPick]){
                 rb.velocity = (target - oldposition).normalized * velocity;
                 reactPick = rnd.Next(3);            
             }
