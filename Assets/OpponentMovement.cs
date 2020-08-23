@@ -7,7 +7,11 @@ public class OpponentMovement : MonoBehaviour
     public int velocity = 5;
     public GameObject ball;
     Rigidbody rb;
-     Vector3 size;
+    Vector3 size;
+
+    System.Random rnd = new System.Random();
+    float[] reactTime = {0.5f, 0.75f, 1};
+    int reactPick;
    
     // Start is called before the first frame update
     void Start()
@@ -15,6 +19,8 @@ public class OpponentMovement : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
         Debug.Log("The fixed time interval is: " + Time.fixedDeltaTime);
         size = this.GetComponentInChildren<Renderer>().bounds.size;
+
+        reactPick = rnd.Next(3);
      
         
     }
@@ -28,8 +34,9 @@ public class OpponentMovement : MonoBehaviour
             target = new Vector3(target.x,oldposition.y,oldposition.z);
             
             
-            if(Mathf.Abs(ball.transform.position.x - this.transform.position.x) >= size.magnitude/2){
-                rb.velocity = (target - oldposition).normalized * velocity;            
+            if(Mathf.Abs(ball.transform.position.x - this.transform.position.x) >= size.magnitude * reactTime[reactPick]){
+                rb.velocity = (target - oldposition).normalized * velocity;
+                reactPick = rnd.Next(3);            
             }
             
             
